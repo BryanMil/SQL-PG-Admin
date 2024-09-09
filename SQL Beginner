@@ -1,0 +1,77 @@
+
+'ALways SELECT , FROM, WHERE
+
+
+
+Select *   (Select All)
+From People   (Table Name people)
+LIMIT 10    (Only show the forstt 10 rows)
+
+' Using SQL to FIlter  WHERE
+Select *   
+ From people
+WHERE pet_type='dog'   (Where the pet_type is dog)
+
+Select * 
+ From people
+ WHERE id >2 
+
+not = is !=
+
+LOGICAL OPERATORS
+
+LIKE allows you to match similar values, instead of exact values.
+IN allows you to specify a list of values you'd like to include.
+BETWEEN allows you to select only rows within a certain range.
+IS NULL allows you to select rows that contain no data in a given column.
+AND allows you to select only rows that satisfy two conditions.
+OR allows you to select rows that satisfy either of two conditions.
+NOT allows you to select rows that do not match a certain condition.
+
+Select * 
+ From people
+ WHERE pet_type LIKE 'do%'  pulls up all with do in the pet_type columnn  (case sensative)
+
+WHERE pet_type ILIKE 'do%'  not case sensative
+
+Where pet_type ILIKE 'd_g' single underscore for on letter
+
+Select * 
+ From people
+ WHERE pet_type In ('dog','cat')  list of values (Case sensative)
+
+Select * 
+ From people
+ WHERE id Between 2 AND 4  values between 2 integers includes the range bounds
+
+OR
+Select * 
+ From people
+ WHERE id >= 2 AND id <= 4
+
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE artist IS NULL  finds were there is no value for artist
+
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2012               year 2012
+   AND year_rank <= 10           rank greater then 10
+   AND "group_name" ILIKE '%feat%'   wildcard *feat* not case sensative
+
+Select * 
+ From people
+ WHERE pet_type = 'dog' OR id = 4
+
+Select * 
+ From people
+ WHERE pet_type = 'dog' OR id = 4
+Order BY id  (in order smallest to biggest id number)
+
+Select * 
+ From people
+ WHERE pet_type = 'dog' OR id = 4
+Order BY id DESC (in order biggest to smallest)
+
+
+
