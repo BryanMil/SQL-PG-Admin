@@ -1,0 +1,23 @@
+Aggregate functions
+
+COUNT counts how many rows are in a particular column.
+SUM adds together all the values in a particular column.
+MIN and MAX return the lowest and highest values in a particular column, respectively.
+AVG calculates the average of a group of selected values.
+
+SELECT COUNT(*)
+  FROM people As Count   1 column with count of rows called count
+
+SELECT COUNT(name)  name is column name
+  FROM people        counts all rows in name coumn were name is not null
+
+SELECT SUM (pet_age)
+  FROM people          sum of all amounts in that row
+
+SELECT MIN(pet_age) AS min_age,    lowest value in colunn pet_age
+       MAX(pet_age) AS max_age     max volume in column pet_age
+  FROM people
+
+SELECT AVG(pet_age)
+  FROM people
+ WHERE pet_age IS NOT NULL
